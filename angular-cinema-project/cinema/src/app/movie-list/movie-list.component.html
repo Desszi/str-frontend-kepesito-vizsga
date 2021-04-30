@@ -2,7 +2,7 @@
     <button id="get-button">Get movie List</button>
     <table>
         <thead>
-          <tr>
+          <tr class="table-row">
             <th>Title</th>
             <th>Year</th>
             <th>Category</th>
@@ -10,7 +10,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="table-row"></tr>
+          <tr class="table-row" *ngFor= "let movie of movieList$ |async">
+            <th>{{ movie.title }}</th>
+            <th>{{ movie.year }}</th>
+            <th>{{ movie.category }}</th>
+            <th></th>
+          </tr>
         </tbody>
     </table>
 </section>

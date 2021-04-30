@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Movie } from '../model/movie';
 
 @Component({
@@ -8,14 +9,16 @@ import { Movie } from '../model/movie';
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[] = [];
+  movieList$: void = this.getMovies();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getMovies(): void {}
+  getMovies(): void {
+    
+  }
 
   deleteMovie(id: number): any {}
 
